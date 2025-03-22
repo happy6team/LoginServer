@@ -2,6 +2,7 @@ package com.practice.loginServer.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -15,7 +16,7 @@ public class Users {
     private Long id;
 
     @Column(nullable = false)
-    private Long userId;
+    private String userId;
 
     @Column(nullable = false)
     private String userName;
@@ -28,4 +29,13 @@ public class Users {
 
     @Column(nullable = false)
     private String phoneNumber;
+
+    @Builder
+    public Users(String userId, String userName, String nickname, String password, String phoneNumber) {
+        this.userId = userId;
+        this.userName = userName;
+        this.nickname = nickname;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+    }
 }
