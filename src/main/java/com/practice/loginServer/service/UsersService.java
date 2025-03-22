@@ -2,13 +2,14 @@ package com.practice.loginServer.service;
 
 import com.practice.loginServer.domain.Users;
 import com.practice.loginServer.dto.AddUsersRequest;
-import com.practice.loginServer.dto.UsersResponse;
 import com.practice.loginServer.repository.UsersRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Transactional
 @RequiredArgsConstructor
 @Service
 public class UsersService {
@@ -25,5 +26,9 @@ public class UsersService {
 
     public List<Users> findAllUsers() {
         return usersRepository.findAll();
+    }
+
+    public void deleteUsers(String userId) {
+        usersRepository.deleteByUserId(userId);
     }
 }
