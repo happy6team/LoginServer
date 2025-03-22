@@ -2,6 +2,7 @@ package com.practice.loginServer.controller;
 
 import com.practice.loginServer.domain.Users;
 import com.practice.loginServer.dto.AddUsersRequest;
+import com.practice.loginServer.dto.LoginRequest;
 import com.practice.loginServer.dto.UpdateUsersRequest;
 import com.practice.loginServer.dto.UsersResponse;
 import com.practice.loginServer.service.UsersService;
@@ -53,5 +54,12 @@ public class UsersController {
         Users users = usersService.updateUsers(userId, request);
         return ResponseEntity.ok()
                 .body(new UsersResponse(users));
+    }
+
+    @GetMapping("/login")
+    public ResponseEntity<Boolean> loginUsers(@RequestBody LoginRequest request) {
+        Boolean check = usersService.loginUsers(request.getUserId(), request.getPassword());
+        return ResponseEntity.ok()
+                .body(check);
     }
 }

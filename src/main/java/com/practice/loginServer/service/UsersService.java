@@ -43,4 +43,9 @@ public class UsersService {
         );
         return users;
     }
+
+    public Boolean loginUsers(String userId, String password) {
+        Users users = usersRepository.findByUserId(userId);
+        return users.getPassword().equals(password.trim());
+    }
 }
