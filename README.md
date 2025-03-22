@@ -2,11 +2,12 @@
 
 | Function | Type | URL | ETC |
 |:---|:---:|:---|:---|
-| 사용자 추가 | Post | /api/users | 사용자 Id(userId), 사용자 전화번호(phoneNumber)는 중복 X |
+| 사용자 추가 | Post | /api/users | 사용자 Id(userId), 사용자 전화번호(phoneNumber)는 중복 X, RequestBody에 사용자 정보 담아 전달 |
 | 사용자 조회 | Get | /api/users/{userId} | |
 | 사용자 전체 조회 | Get | /api/users/all | |
 | 사용자 삭제 | Delete | /api/users/{userId} | |
 | 사용자 수정 | Put | /api/users/{userId} | 사용자 Id(userId)는 수정 불가 | 
+| 사용자 로그인 | Get | /api/users/login | true/false 반환, RequestBody에 id, pw 담아 전달 | 
 
 # API 사용방법
 
