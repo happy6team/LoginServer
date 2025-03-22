@@ -2,6 +2,7 @@ package com.practice.loginServer.service;
 
 import com.practice.loginServer.domain.Users;
 import com.practice.loginServer.dto.AddUsersRequest;
+import com.practice.loginServer.dto.UpdateUsersRequest;
 import com.practice.loginServer.repository.UsersRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -30,5 +31,16 @@ public class UsersService {
 
     public void deleteUsers(String userId) {
         usersRepository.deleteByUserId(userId);
+    }
+
+    public Users updateUsers(String userId, UpdateUsersRequest request) {
+        Users users = usersRepository.findByUserId(userId);
+        users.update(
+                request.getUserName(),
+                request.getNickname(),
+                request.getPassword(),
+                request.getPhoneNumber()
+        );
+        return users;
     }
 }

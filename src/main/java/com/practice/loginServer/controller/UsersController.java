@@ -2,6 +2,7 @@ package com.practice.loginServer.controller;
 
 import com.practice.loginServer.domain.Users;
 import com.practice.loginServer.dto.AddUsersRequest;
+import com.practice.loginServer.dto.UpdateUsersRequest;
 import com.practice.loginServer.dto.UsersResponse;
 import com.practice.loginServer.service.UsersService;
 import lombok.RequiredArgsConstructor;
@@ -45,5 +46,12 @@ public class UsersController {
         usersService.deleteUsers(userId);
         return ResponseEntity.ok()
                 .build();
+    }
+
+    @PutMapping("/{userId}")
+    public ResponseEntity<UsersResponse> updateUsers(@PathVariable(name = "userId") String userId, @RequestBody UpdateUsersRequest request) {
+        Users users = usersService.updateUsers(userId, request);
+        return ResponseEntity.ok()
+                .body(new UsersResponse(users));
     }
 }
