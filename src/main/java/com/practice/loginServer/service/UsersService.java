@@ -15,4 +15,8 @@ public class UsersService {
     public Users create(AddUsersRequest request) {
         return usersRepository.save(request.toEntity());
     }
+
+    public Users findUsers(String userId) {
+        return usersRepository.findByUserId(userId);
+    }
 }
