@@ -1,8 +1,8 @@
 package com.practice.loginServer.dto;
 
-import lombok.Getter;
+import lombok.Data;
 
-@Getter
+@Data
 public class LoginRequest {
     private String userId;
     private String password;

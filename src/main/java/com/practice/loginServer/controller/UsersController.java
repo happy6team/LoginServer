@@ -56,7 +56,7 @@ public class UsersController {
                 .body(new UsersResponse(users));
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public ResponseEntity<Boolean> loginUsers(@RequestBody LoginRequest request) {
         Boolean check = usersService.loginUsers(request.getUserId(), request.getPassword());
         return ResponseEntity.ok()
