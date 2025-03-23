@@ -1,3 +1,15 @@
+# VSCode에서 프로젝트 실행하는 방법
+springboot 프로젝트 빌드하기
+```
+./gradlew.bat clean build   // 윈도우 명령어
+./gradlew clean build  // 맥 명령어
+```
+LoginServerApplication.java 파일에서 삼각형 버튼(run) 눌러서 run
+
+브라우저에서 localhost:8080/api/users/all 확인해보기.
+실행 직후에는 h2 데이터베이스에 아무것도 없기때문에 [] 빈 리스트 나오면 프로젝트 실행 성공입니다.
+
+
 # API URL 
 
 | Function | Type | URL | ETC |
