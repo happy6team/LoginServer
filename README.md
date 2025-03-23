@@ -1,5 +1,5 @@
-# VSCode에서 프로젝트 실행하는 방법
-springboot 프로젝트 빌드하기
+# 프로젝트 실행 방법
+springboot 프로젝트 빌드하기. 각자 환경에 맞는 명령어로 빌드해 주세요.
 ```
 ./gradlew.bat clean build   // 윈도우 명령어
 ./gradlew clean build  // 맥 명령어
@@ -28,3 +28,20 @@ LoginServerApplication.java 파일에서 삼각형 버튼(run) 눌러서 run
 3. Vue.js를 이용해 실습(url 요청)한다.
 
 **서버는 h2 데이터베이스 기반이고 다시 실행하면 전체 테이블 내용이 삭제되니 주의**
+
+
+# API requestBody, responseBody 예시
+> 위에는 요청에 들어가는 requestBody, 아래는 응답에 들어가는 responseBody입니다.
+
+
+| api description | examples |
+|:---|:---|
+|회원가입 (사용자 추가) | ![image](https://github.com/user-attachments/assets/c028673f-eb23-4f44-8425-3b335441b9da) |
+|사용자 조회 | ![image](https://github.com/user-attachments/assets/07e8e785-cd10-45cb-8707-872181d594e6) |
+| 사용자 전체 조회 | ![image](https://github.com/user-attachments/assets/fb4082ec-9b71-49b9-972b-78ec1b5841fe) |
+| 사용자 삭제 | ![image](https://github.com/user-attachments/assets/ffe4b378-4c7e-4a5f-aac4-ef93cb90ebca) |
+| 사용자 수정 | ![image](https://github.com/user-attachments/assets/14519f1c-37d4-4682-a8aa-57ddd7dedd96) |
+| 사용자 로그인 | 로그인 성공시 true 반환 <br/> ![image](https://github.com/user-attachments/assets/ef61cb95-3dbf-41ab-b744-59121bd913d2)  <br/>  로그인 실패 시 false 반환 <br/> ![image](https://github.com/user-attachments/assets/fd3c653e-e6da-47b2-900e-1822d3dceedc) |
+
+
+
