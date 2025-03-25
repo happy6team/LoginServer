@@ -1,8 +1,18 @@
 # 프로젝트 실행 방법
 springboot 프로젝트 빌드하기. 각자 환경에 맞는 명령어로 빌드해 주세요.
+
+*자바 21 버전 필요
+
 ```
-./gradlew.bat clean build   // 윈도우 명령어
-./gradlew clean build  // 맥 명령어
+// 윈도우 명령어
+./gradlew.bat clean build // 빌드
+   
+
+// 맥 명령어
+chmod +x ./gradlew // 권한 부여
+./gradlew clean build // 빌드
+./gradlew bootRun // 실행
+
 ```
 LoginServerApplication.java 파일에서 삼각형 버튼(run) 눌러서 run
 
